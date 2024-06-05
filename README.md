@@ -1,4 +1,4 @@
-# Post-Me
+# Blog-Beats
 
 ## User Story
 As a user, I want to create a personalized profile with a unique username so that I can share my thoughts and stories on the blog board. Additionally, I want to play and enjoy my favorite music directly on the platform, enhancing my blogging experience and connecting with a community that values both written expression and musical enjoyment
