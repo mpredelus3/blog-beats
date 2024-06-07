@@ -1,24 +1,82 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
-}
+body {
 
-.no-button {
-  background: none;
-  border: none;
+  background-color: #000;
+
+  color: #ffe5e5; /* Red text color */
+
+  font-family: 'Courier New', Courier, monospace;
+
+  margin: 0;
+
   padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
-  text-decoration: none;
-  font-size: 100%;
+
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+
+
+.container {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: auto auto 1fr;
+
+  gap: 20px;
+
+  padding: 20px;
+
+  height: 100vh;
+
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+
+
+.box {
+
+  background: linear-gradient(to bottom, #3c3c3c, #8e8e8e);
+
+  padding: 20px;
+
+  border-radius: 5px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 1.2em;
+
+  height: 150px; /* Adjust height as needed */
+
+}
+
+
+
+.top-bar {
+
+  grid-column: span 3;
+
+  background: linear-gradient(to right, #3c3c3c, #8e8e8e);
+
+}
+
+
+
+.large {
+
+  grid-column: span 3;
+
+  height: 400px;
+}
+  
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
