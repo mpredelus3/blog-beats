@@ -34,9 +34,10 @@ h1, h2, h3, h4, h5, h6, p, div {
 
 .top-bar {
   grid-column: span 3;
-  background: linear-gradient(to right, #000000, #8e8e8e);
-  font-size: xxX-large;
-  background-image: url(/);
+  background-image: url("/images/");
+  background-size: cover;
+  background-position: center;
+  font-size: xxx-large;
 }
 
 .large {
@@ -51,16 +52,6 @@ h1, h2, h3, h4, h5, h6, p, div {
   font-style: normal;
 }
 
-.logo1 {
-  max-height: 100%;
-  max-width: 100%;
-  width: 150px;
-  height: 150px;
-  background-size: cover;
-  
-  float: left;
-}
-
 .input-group{
-  background-image: url("/views/layouts/Raccoon.png");
+  background-image: url("/images/Raccoon.png");
 }
