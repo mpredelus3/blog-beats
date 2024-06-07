@@ -6,19 +6,22 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
+/* h1, h2, h3, h4, h5, h6, p, div {
   font-family: "Orbitron", sans-serif;
-}
+} */
 a:-webkit-any-link {
-  color: -webkit-link;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   text-decoration: underline;
   height: auto;
-text-decoration-color: rgb(255, 255, 255);
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-thickness: auto;
-width: auto;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  font-size: xxx-large;
+  float: left;
+  margin-left: 65%;
+  width: 150px;
 }
 
 .container {
@@ -57,11 +60,11 @@ width: auto;
 } */
 
 .top-bar img {
-  float: left;
-  margin-right: 80%;
+  /* float: right; */
+  margin-right: 50%;
   width: 150px;
   height: auto; 
-  background-image: rgba(255, 255, 255, 0.5);
+  /* background-image: rgba(255, 255, 255, 0.5); */
 }
 
 .large {
