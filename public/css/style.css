@@ -1,13 +1,13 @@
 body {
   background-color: #000;
-  color: #ffe5e5; /* Red text color */
-  font-family: 'Rubik Glitch', sans-serif;
+  color: #f9f9f9; /* Red text color */
+  font-family: "Orbitron", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, div {
-  font-family: 'Rubik Glitch', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .container {
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 }
 
 .box {
-  background: linear-gradient(to bottom, #3c3c3c, #8e8e8e);
+  background: linear-gradient(to bottom, #232323, #8e8e8e);
   padding: 20px;
   border-radius: 5px;
   display: flex;
@@ -29,12 +29,14 @@ h1, h2, h3, h4, h5, h6, p, div {
   justify-content: center;
   text-align: center;
   font-size: 1.2em;
-  height: 150px; /* Adjust height as needed */
+  height: 150px; 
 }
 
 .top-bar {
   grid-column: span 3;
-  background: linear-gradient(to right, #3c3c3c, #8e8e8e);
+  background: linear-gradient(to right, #000000, #8e8e8e);
+  font-size: xxX-large;
+  background-image: url(/);
 }
 
 .large {
@@ -42,9 +44,10 @@ h1, h2, h3, h4, h5, h6, p, div {
   height: 400px;
 }
 
-.libre-barcode-128-text-regular {
-  font-family: "Libre Barcode 128 Text", system-ui;
-  font-weight: 400;
+
+.orbitron-uniquifier {
+  font-optical-sizing: auto;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -54,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p, div {
   width: 150px;
   height: 150px;
   background-size: cover;
-  background-image: url("/views/layouts/Raccoon.png");
+  
   float: left;
 }
 
