@@ -1,82 +1,57 @@
 body {
-
   background-color: #000;
-
-  color: #ffe5e5; /* Red text color */
-
-  font-family: 'Courier New', Courier, monospace;
-
+  color: #f9f9f9; /* Red text color */
+  font-family: "Orbitron", sans-serif;
   margin: 0;
-
   padding: 0;
-
 }
 
-
+h1, h2, h3, h4, h5, h6, p, div {
+  font-family: "Orbitron", sans-serif;
+}
 
 .container {
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   grid-template-rows: auto auto 1fr;
-
   gap: 20px;
-
   padding: 20px;
-
   height: 100vh;
-
 }
-
-
 
 .box {
-
-  background: linear-gradient(to bottom, #3c3c3c, #8e8e8e);
-
+  background: linear-gradient(to bottom, #232323, #8e8e8e);
   padding: 20px;
-
   border-radius: 5px;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
   font-size: 1.2em;
-
-  height: 150px; /* Adjust height as needed */
-
+  height: 150px; 
 }
-
-
 
 .top-bar {
-
   grid-column: span 3;
-
-  background: linear-gradient(to right, #3c3c3c, #8e8e8e);
-
+  background-image: url("/images/");
+  background-size: cover;
+  background-position: center;
+  font-size: xxx-large;
 }
-
-
 
 .large {
-
   grid-column: span 3;
-
   height: 400px;
 }
-  
-.tiny5-regular {
-  font-family: "Tiny5", sans-serif;
-  font-weight: 400;
+
+
+.orbitron-uniquifier {
+  font-optical-sizing: auto;
+  font-weight: 900;
   font-style: normal;
+}
+
+.input-group{
+  background-image: url("/images/Raccoon.png");
 }
