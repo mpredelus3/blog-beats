@@ -25,13 +25,12 @@
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <div class="box top-bar">Blog Beats
       <img src="images/raccon.png">
     </div>
-    <div class="box status">Views Count</div>
+    {{!-- <div class="box status">Views Count</div>
     <div class="box user-info"></div>
     <div class="box login-form-container">
       <form class="login-form">
@@ -56,8 +55,31 @@
     </div>
     <div class="box large">
 
-    </div>
+    </div> --}}
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
   </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
+
