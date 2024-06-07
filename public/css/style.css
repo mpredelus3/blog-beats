@@ -34,14 +34,23 @@ h1, h2, h3, h4, h5, h6, p, div {
 
 .top-bar {
   grid-column: span 3;
+  background-image: url("/images/");
   background-size: cover;
   background-position: center;
   font-size: xxx-large;
 }
 
-.raccoon {
+/* .raccoon {
   width: 200px;
   height: 200px;
+} */
+
+.top-bar img {
+  float: left;
+  margin-right: 80%;
+  width: 150px;
+  height: auto; 
+  background-image: rgba(255, 255, 255, 0.5);
 }
 
 .large {

@@ -26,12 +26,36 @@
   </style>
 </head>
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
+  <div class="container">
+    <div class="box top-bar">Blog Beats
+      <img src="images/raccon.png">
+    </div>
+    {{!-- <div class="box status">Views Count</div>
+    <div class="box user-info"></div>
+    <div class="box login-form-container">
+      <form class="login-form">
+        <div class="input-group">
+          <label for="username">
+            User Beats
+          </label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div class="input-group">
+          <label for="password">
+            Password
+          </label>
+          <input type="password" id="password" name="password">
+        </div>
+        <button type="submit" class="login-button">Sign in</button>
+        <div class="links">
+          <a href="/create-account">Create Account</a>
+          <a href="/forgot-password">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+    <div class="box large">
+
+    </div> --}}
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
