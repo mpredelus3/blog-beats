@@ -1,10 +1,16 @@
 body {
   background-color: #000;
-  color: #f9f9f9; /* Red text color */
+  background-image: url(https://i.pinimg.com/originals/f9/36/77/f93677f81dc315371074d2db6116c594.gif),
+    linear-gradient(#000000, #26640e);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #f9f9f9; /* Light text color */
   font-family: "Orbitron", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 
 /* h1, h2, h3, h4, h5, h6, p, div {
   font-family: "Orbitron", sans-serif;
