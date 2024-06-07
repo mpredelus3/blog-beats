@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p, div {
 
 .top-bar {
   grid-column: span 3;
-  background-image: url("/images/");
+  background-image: url("/images/Raccoon.png");
   background-size: cover;
   background-position: center;
   font-size: xxx-large;
@@ -50,8 +50,4 @@ h1, h2, h3, h4, h5, h6, p, div {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
-}
-
-.input-group{
-  background-image: url("/images/Raccoon.png");
 }
