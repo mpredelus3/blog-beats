@@ -27,10 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-
 router.get('/blog/:id', async (req, res) => {
-// get project data by id
-
   try {
     const blogData = await Blog.findByPk(req.params.id, {
       include: [
@@ -84,3 +81,4 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
