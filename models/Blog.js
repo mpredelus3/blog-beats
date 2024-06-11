@@ -4,7 +4,6 @@ const sequelize = require('../config/connection');
 class Blog extends Model {}
 
 Blog.init(
-// runs the project and creates the object data
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,15 +17,6 @@ Blog.init(
     },
     description: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
       allowNull: false,
     },
     user_id: {
