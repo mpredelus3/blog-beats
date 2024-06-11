@@ -1,4 +1,5 @@
 <!-- Loop over each object in the projects array -->
+
 {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
@@ -7,6 +8,8 @@
       {{{get_emoji}}}
       <a href="/project/{{project.id}}">{{project.name}}</a>
     </h2>
+    <div class="container">
+
     <p>
       <span for="img" aria-label="money">💲</span>
       <!-- Pass needed_funding value to the helper function -->
