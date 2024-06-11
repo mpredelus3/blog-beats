@@ -83,10 +83,13 @@ a:-webkit-any-link {
 }
 
 .no-button {
+  background-color: rgba(0, 0, 0, 0);
   border: none;
-  color: #000000; 
+  color: #ffffff; 
   cursor: pointer;
   font-size: xxx-large;
   text-decoration: underline;
+  text-align: center;
+  display: flex;
 }
 
