@@ -1,22 +1,12 @@
-<!-- Loop over each object in the blogs array -->
+{{!-- Remove the loop over blogs to ensure no blogs are displayed --}}
+{{!-- 
 {{#each blogs as |blog| }}
 <div class="row mb-4 blog">
-
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/blog/{{blog.id}}">{{blog.name}}</a>
     </h2>
-    <div class="container">
-
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount blog.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{blog.user.name}} on {{format_date blog.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
@@ -25,3 +15,10 @@
   </div>
 </div>
 {{/each}}
+--}}
+
+<!-- Add content you want to display on the homepage instead -->
+<div class="welcome-message">
+  <h1>Welcome to Blog Beats</h1>
+  <p>Please log in to create and view blogs.</p>
+</div>
