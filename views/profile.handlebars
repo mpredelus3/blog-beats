@@ -6,24 +6,24 @@
 
 <div class='row mt-4'>
   <div class='col-md-6'>
-    <h3>Create a New Project:</h3>
+    <h3>Create a New Blog:</h3>
 
-    <form class='form new-project-form'>
+    <form class='form new-blog-form'>
       <div class='form-group'>
-        <label for='project-name'>Title:</label>
+        <label for='blog-name'>Title:</label>
         <input
           class='form-input'
           type='text'
-          id='project-name'
-          name='project-name'
+          id='blog-name'
+          name='blog-name'
         />
       </div>
       <div class='form-group'>
-        <label for='project-desc'>description:</label>
+        <label for='blog-desc'>description:</label>
         <textarea
           class='form-input'
-          id='project-desc'
-          name='project-desc'
+          id='blog-desc'
+          name='blog-desc'
         ></textarea>
       </div>
       <div class='form-group'>
@@ -32,19 +32,19 @@
     </form>
   </div>
 
-  {{#if projects.length}}
-    <div class='col-md-6 project-list'>
-      <h3>Current Projects:</h3>
+  {{#if blogs.length}}
+    <div class='col-md-6 blog-list'>
+      <h3>Current Blogs:</h3>
 
-      {{#each projects as |project|}}
+      {{#each blogs as |blog|}}
         <div class='row mb-2'>
           <div class='col-md-8'>
-            <h4><a href='/project/{{project.id}}'>{{project.name}}</a></h4>
+            <h4><a href='/blog/{{blog.id}}'>{{blog.name}}</a></h4>
           </div>
           <div class='col-md-4'>
             <button
               class='btn btn-sm btn-danger'
-              data-id='{{project.id}}'
+              data-id='{{blog.id}}'
             >DELETE</button>
           </div>
         </div>
