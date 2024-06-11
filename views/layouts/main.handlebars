@@ -1,4 +1,3 @@
-{{!-- creates the basic html for every page --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,11 +24,13 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <div class="box top-bar">Blog Beats
-      <img src="/images/Raccoon.png">
-    </div>
+    <header>
+      <div class="box top-bar">Blog Beats
+        <img src="/images/Raccoon.png" alt="Logo">
+      </div>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -45,7 +46,7 @@
       {{{ body }}}
     </main>
     <footer>
-      
+      <!-- Add footer content here if needed -->
     </footer>
   </div>
 
@@ -56,4 +57,3 @@
 </body>
 
 </html>
-
