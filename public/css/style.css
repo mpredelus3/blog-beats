@@ -1,11 +1,11 @@
 body {
-  background-color: #000;
+  background-color: #000000;
+  color: #ffffff;
   background-image: url(https://i.pinimg.com/originals/f9/36/77/f93677f81dc315371074d2db6116c594.gif),
     linear-gradient(#000000, #26640e);
   background-size: contain;
   background-position: right;
   background-repeat: no-repeat;
-  color: #f9f9f9; /* Light text color */
   font-family: "Orbitron", sans-serif;
   margin: 0;
   padding: 0;
@@ -60,22 +60,19 @@ a:-webkit-any-link {
   font-size: xxx-large;
 }
 
-/* .raccoon {
-  width: 200px;
-  height: 200px;
-} */
 
 .top-bar img {
   /* float: right; */
   margin-right: 50%;
   width: 150px;
   height: auto; 
-  /* background-image: rgba(255, 255, 255, 0.5); */
+  background-image: rgba(255, 255, 255, 0.5);
 }
 
 .large {
   grid-column: span 3;
   height: 400px;
+  background-color: white;
 }
 
 
@@ -83,5 +80,13 @@ a:-webkit-any-link {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+}
+
+.no-button {
+  border: none;
+  color: #000000; 
+  cursor: pointer;
+  font-size: xxx-large;
+  text-decoration: underline;
 }
 
