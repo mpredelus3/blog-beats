@@ -18,11 +18,7 @@ The blogging feature on Blog is designed to post any random thoughts. This tool 
 >Features
 Content Creation: Write and publish blog posts about your stories, and more.
 
-<<<<<<< HEAD
-Welcome to Blog Beats—a full-stack blog platform designed and developed to showcase the skills and knowledge accumulated over the past six modules. This project is a testament to our dedication and proficiency in creating a real-world application that meets the highest industry standards. Here’s what sets Blog Haven apart:
-=======
 Welcome to Blog Beats—a full-stack blog platform designed and developed to showcase the skills and knowledge accumulated over the past six modules. This project is a testament to our dedication and proficiency in creating a real-world application that meets the highest industry standards. Here’s what sets Blog Beats apart:
->>>>>>> a36c2dc5978c95416bc7443e7724a7483d89d441
 Project Features:
 Robust Backend with RESTful API:
 Utilizes Node.js and Express.js to build a powerful and scalable RESTful API.

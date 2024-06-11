@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Project extends Model {}
 
+// runs the project and creates the object data
 Project.init(
   {
     id: {

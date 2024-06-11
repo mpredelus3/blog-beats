@@ -1,9 +1,11 @@
 const sequelize = require('../config/connection');
 const { User, Project } = require('../models');
 
+// imports the user and project data
 const userData = require('./userData.json');
 const projectData = require('./projectData.json');
 
+// function to seed the database with user and project data
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
@@ -22,4 +24,5 @@ const seedDatabase = async () => {
   process.exit(0);
 };
 
+// runs the seed function
 seedDatabase();
