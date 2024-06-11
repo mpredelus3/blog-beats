@@ -1,12 +1,15 @@
 <!-- Loop over each object in the blogs array -->
 {{#each blogs as |blog| }}
 <div class="row mb-4 blog">
+
   <div class="col-md-5">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
       <a href="/blog/{{blog.id}}">{{blog.name}}</a>
     </h2>
+    <div class="container">
+
     <p>
       <span for="img" aria-label="money">💲</span>
       <!-- Pass needed_funding value to the helper function -->

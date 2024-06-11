@@ -27,7 +27,10 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 router.get('/blog/:id', async (req, res) => {
+// get project data by id
+
   try {
     const blogData = await Blog.findByPk(req.params.id, {
       include: [
@@ -69,6 +72,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+// get login data
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
