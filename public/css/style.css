@@ -1,13 +1,33 @@
 body {
   background-color: #000;
-  color: #f9f9f9; /* Red text color */
+  background-image: url(https://i.pinimg.com/originals/f9/36/77/f93677f81dc315371074d2db6116c594.gif),
+    linear-gradient(#000000, #26640e);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: #f9f9f9; /* Light text color */
   font-family: "Orbitron", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
+
+/* h1, h2, h3, h4, h5, h6, p, div {
   font-family: "Orbitron", sans-serif;
+} */
+a:-webkit-any-link {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: underline;
+  height: auto;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  font-size: xxx-large;
+  float: left;
+  margin-left: 65%;
+  width: 150px;
 }
 
 .container {
@@ -46,11 +66,11 @@ h1, h2, h3, h4, h5, h6, p, div {
 } */
 
 .top-bar img {
-  float: left;
-  margin-right: 80%;
+  /* float: right; */
+  margin-right: 50%;
   width: 150px;
   height: auto; 
-  background-image: rgba(255, 255, 255, 0.5);
+  /* background-image: rgba(255, 255, 255, 0.5); */
 }
 
 .large {
@@ -65,8 +85,3 @@ h1, h2, h3, h4, h5, h6, p, div {
   font-style: normal;
 }
 
-.links a {
-  color: #841f1f;
-  text-decoration: none;
-  margin-right: 10px;
-}
