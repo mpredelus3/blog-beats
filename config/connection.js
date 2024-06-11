@@ -7,6 +7,7 @@ if (process.env.DB_URL) {
   sequelize = new Sequelize(process.env.DB_URL);
 } else {
   sequelize = new Sequelize(
+    // pulls the data from the .env file to login to the server
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD,
@@ -17,4 +18,5 @@ if (process.env.DB_URL) {
   );
 }
 
+// exports the sequelize setup
 module.exports = sequelize;
