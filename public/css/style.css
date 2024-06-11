@@ -62,7 +62,7 @@ a:-webkit-any-link {
 
 
 .top-bar img {
-  /* float: right; */
+  mix-blend-mode: lighten;
   margin-right: 50%;
   width: 150px;
   height: auto; 
@@ -87,7 +87,7 @@ a:-webkit-any-link {
   border: none;
   color: #ffffff; 
   cursor: pointer;
-  font-size: xxx-large;
+  font-size: xx-large;
   text-decoration: underline;
   text-align: center;
   display: flex;
