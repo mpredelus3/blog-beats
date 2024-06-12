@@ -1,50 +1,41 @@
-const router = require('express').Router();
-const { Blog } = require('../../models');
-const withAuth = require('../../utils/auth');
+const express = require('express');
+const router = express.Router();
 
-// Route to create a new blog
-router.post('/', withAuth, async (req, res) => {
-  try {
-    // Log request body and session user ID for debugging
-    console.log('Request Body:', req.body);
-    console.log('Session User ID:', req.session.user_id);
+// Mock data and user
+const blogs = [];
+const user = {
+  name: "John Doe",
+  email: "john@example.com"
+};
 
-    if (!req.body.name || !req.body.description) {
-      res.status(400).json({ message: 'Name and description are required.' });
-      return;
-    }
-
-    const newBlog = await Blog.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-
-    res.status(200).json(newBlog);
-  } catch (err) {
-    console.error(err); // Log error for debugging
-    res.status(400).json(err);
-  }
+// GET route to fetch all blogs
+router.get('/', (req, res) => {
+  res.json(blogs);
 });
 
-// Route to delete a blog
-router.delete('/:id', withAuth, async (req, res) => {
-  try {
-    const blogData = await Blog.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
-
-    if (!blogData) {
-      res.status(404).json({ message: 'No blog found with this id!' });
-      return;
-    }
-
-    res.status(200).json(blogData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+// POST route to create a new blog
+router.post('/', (req, res) => {
+  const { name, description } = req.body;
+  const newBlog = {
+    id: blogs.length + 1,
+    name,
+    description,
+    user,
+    date_created: new Date()
+  };
+  blogs.push(newBlog);
+  res.status(201).json(newBlog);
 });
 
+// DELETE route to delete a blog by ID
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  const index = blogs.findIndex(blog => blog.id == id);
+  if (index !== -1) {
+    blogs.splice(index, 1);
+    res.status(200).json({ message: 'Blog deleted' });
+  } else {
+    res.status(404).json({ message: 'Blog not found' });
+  }
+});
 module.exports = router;
