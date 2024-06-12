@@ -60,6 +60,10 @@ a:-webkit-any-link {
   font-size: xxx-large;
 }
 
+.large-textarea {
+  width: 1000px;
+  height: 500px;
+}
 
 .top-bar img {
   mix-blend-mode: lighten;
