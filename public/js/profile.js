@@ -1,48 +1,62 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
 
-  const name = document.querySelector('#blog-name').value.trim();
-  const description = document.querySelector('#blog-desc').value.trim();
+  const newFormHandler = async (event) => {
+    event.preventDefault();
 
-  if (name && description) {
-    const response = await fetch('/api/blogs', {
-      method: 'POST',
-      body: JSON.stringify({ name, description }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const name = document.querySelector('#blog-name').value.trim();
+    const description = document.querySelector('#blog-desc').value.trim();
 
-    if (response.ok) {
-      document.location.replace('/profile');
+    if (name && description) {
+      const response = await fetch('/api/blogs', {
+        method: 'POST',
+        body: JSON.stringify({ name, description }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert('Failed to create blog');
+      }
     } else {
-      alert('Failed to create blog');
+      alert('Please fill out all fields');
     }
+  };
+
+  const delButtonHandler = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+
+      const response = await fetch(`/api/blogs/${id}`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        document.location.replace('/profile');
+      } else {
+        alert('Failed to delete blog');
+      }
+    }
+  };
+
+  const form = document.querySelector('.new-blog-form');
+  console.log('Form element:', form);
+
+  if (form) {
+    form.addEventListener('submit', newFormHandler);
   } else {
-    alert('Please fill out all fields');
+    console.error('Form element not found');
   }
-};
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+  const blogList = document.querySelector('.blog-list');
+  console.log('Blog list element:', blogList);
 
-    const response = await fetch(`/api/blogs/${id}`, {
-      method: 'DELETE',
-    });
-
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete blog');
-    }
+  if (blogList) {
+    blogList.addEventListener('click', delButtonHandler);
+  } else {
+    console.error('Blog list element not found');
   }
-};
-
-document
-  .querySelector('.new-blog-form')
-  .addEventListener('submit', newFormHandler);
-
-document
-  .querySelector('.blog-list')
-  .addEventListener('click', delButtonHandler);
+});

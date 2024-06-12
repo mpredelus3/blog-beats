@@ -54,7 +54,7 @@ a:-webkit-any-link {
 
 .top-bar {
   grid-column: span 3;
-  background-image: url("/images/");
+  background-image: url("/public/images/Raccoon.png");
   background-size: cover;
   background-position: center;
   font-size: xxx-large;
@@ -91,5 +91,9 @@ a:-webkit-any-link {
   text-decoration: underline;
   text-align: center;
   display: flex;
+}
+.large-textarea {
+  width: 1000px;
+  height: 500px;
 }
 
