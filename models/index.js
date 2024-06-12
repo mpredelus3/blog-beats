@@ -3,7 +3,7 @@ const Blog = require('./Blog');
 
 
 User.hasMany(Blog, {
-// multiple projects can belong to one user
+// multiple blogs can belong to one user
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
