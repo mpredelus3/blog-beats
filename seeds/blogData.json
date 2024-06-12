@@ -1,0 +1,9 @@
+[
+  {
+    "name": "First Blog",
+    "description": "This is the first blog post.",
+    "user_id": 1,
+    "likes": 10,
+    "views": 100
+  }
+]

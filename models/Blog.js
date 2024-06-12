@@ -16,7 +16,7 @@ Blog.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     user_id: {
@@ -26,10 +26,18 @@ Blog.init(
         key: 'id',
       },
     },
+    likes: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
+    views: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+    },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'blog',
@@ -37,3 +45,4 @@ Blog.init(
 );
 
 module.exports = Blog;
+

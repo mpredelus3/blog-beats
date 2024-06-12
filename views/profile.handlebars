@@ -9,11 +9,31 @@
     </div>
     <div>
       <label for="blog-desc">Description:</label>
-      <textarea class="form-input large-textarea" id="blog-desc" name="blog-desc" style="width: 1000px; height: 500px;" required></textarea>
+      <textarea class="form-input large-textarea" id="blog-desc" name="blog-desc" style="width: 300%; height: 500px;" required></textarea>
     </div>
     <button type="submit">Create Blog</button>
   </form>
 </div>
+
+  {{!-- this is the code form the mini project
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div> --}}
+
 
 <div class="user-blogs">
   <h2>Your Blogs</h2>
@@ -21,16 +41,15 @@
     {{#each blogs}}
     <div class="blog-post mb-4" data-id="{{this.id}}">
       <div class="post-header">
-        <h3>
-          {{{get_emoji}}}
-          <a href="/blog/{{this.id}}">{{this.name}}</a>
-        </h3>
-        <p class="post-meta">Created by {{this.user.name}} on {{format_date this.date_created}}</p>
+        <p class="post-meta">Created by {{this.user.name}} on {{format_date this.createdAt}}</p>
       </div>
       <div class="post-content">
         <p>{{this.description}}</p>
+        <p>Views: <span class="views-count">{{this.views}}</span></p>
+        <p>Likes: <span class="likes-count">{{this.likes}}</span></p>
+        <button class="like-blog-btn" data-id="{{this.id}}">Like</button>
       </div>
-           <button class="delete-blog-btn" data-id="{{this.id}}">Delete Blog</button>
+      <button class="delete-blog-btn" data-id="{{this.id}}">Delete Blog</button>
     </div>
     {{/each}}
   </div>
