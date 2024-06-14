@@ -29,10 +29,63 @@ a:webkit-any-link {
   text-decoration-thickness: auto;
 }
 
+<<<<<<< HEAD
 main {
   position: relative;
   width: 37%;
   right: 33vh;
+=======
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto 1fr;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+}
+
+.box {
+  background: linear-gradient(to bottom, #232323, #8e8e8e);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  height: 150px; 
+}
+
+.top-bar {
+  grid-column: span 3;
+  background-image: url("/public/images/Raccoon.png");
+  background-size: cover;
+  background-position: center;
+  font-size: xxx-large;
+}
+
+
+.top-bar img {
+  mix-blend-mode: lighten;
+  margin-right: 50%;
+  width: 150px;
+  height: auto; 
+  background-image: rgba(255, 255, 255, 0.5);
+}
+
+.large {
+  grid-column: span 3;
+  height: 400px;
+  background-color: white;
+}
+
+
+.orbitron-uniquifier {
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+>>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20
 }
 
 .no-button {
@@ -43,6 +96,10 @@ main {
   color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
+}
+.large-textarea {
+  width: 1000px;
+  height: 500px;
 }
 
 .no-button:hover {
