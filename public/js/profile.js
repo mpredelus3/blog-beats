@@ -1,49 +1,50 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
 <<<<<<< HEAD
   const newFormHandler = async (event) => {
     event.preventDefault();
+=======
+const newFormHandler = async (event) => {
+  event.preventDefault();
+>>>>>>> parent of 34530d9 (wrapped code so that the DOM is fully loaded)
 
-    const name = document.querySelector('#project-name').value.trim();
-    const description = document.querySelector('#project-desc').value.trim();
+  const name = document.querySelector('#project-name').value.trim();
+  const description = document.querySelector('#project-desc').value.trim();
 
-    if (name && description) {
-      const response = await fetch(`/api/projects`, {
-        method: 'POST',
-        body: JSON.stringify({ name, description }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+  if (name && description) {
+    const response = await fetch(`/api/projects`, {
+      method: 'POST',
+      body: JSON.stringify({ name, description }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to create project');
-      }
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to create project');
     }
-  };
-
-  const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-
-      const response = await fetch(`/api/projects/${id}`, {
-        method: 'DELETE',
-      });
-
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete project');
-      }
-    }
-  };
-
-  const newProjectForm = document.querySelector('.new-project-form');
-  if (newProjectForm) {
-    newProjectForm.addEventListener('submit', newFormHandler);
   }
+};
 
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/projects/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete project');
+    }
+  }
+};
+
+<<<<<<< HEAD
   const projectList = document.querySelector('.project-list');
   if (projectList) {
     projectList.addEventListener('click', delButtonHandler);
@@ -111,3 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 >>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20
 });
+=======
+document
+  .querySelector('.new-project-form')
+  .addEventListener('submit', newFormHandler);
+
+document
+  .querySelector('.project-list')
+  .addEventListener('click', delButtonHandler);
+>>>>>>> parent of 34530d9 (wrapped code so that the DOM is fully loaded)
