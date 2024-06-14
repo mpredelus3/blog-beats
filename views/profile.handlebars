@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
@@ -42,3 +43,44 @@
 </div>
 
 <script src="./js/profile.js"></script>
+=======
+<h1>Your Blogs</h1>
+
+<div class="blog-form">
+  <h2>Create a New Blog Post</h2>
+  <form class="new-blog-form">
+    <div>
+      <label for="blog-name">Blog Name:</label>
+      <input type="text" id="blog-name" name="name" required>
+    </div>
+    <div>
+      <label for="blog-desc">Description:</label>
+      <textarea class="form-input large-textarea" id="blog-desc" name="blog-desc" style="width: 1000px; height: 500px;" required></textarea>
+    </div>
+    <button type="submit">Create Blog</button>
+  </form>
+</div>
+
+<div class="user-blogs">
+  <h2>Your Blogs</h2>
+  <div class="blog-list">
+    {{#each blogs}}
+    <div class="blog-post mb-4" data-id="{{this.id}}">
+      <div class="post-header">
+        <h3>
+          {{{get_emoji}}}
+          <a href="/blog/{{this.id}}">{{this.name}}</a>
+        </h3>
+        <p class="post-meta">Created by {{this.user.name}} on {{format_date this.date_created}}</p>
+      </div>
+      <div class="post-content">
+        <p>{{this.description}}</p>
+      </div>
+      <button class="delete-blog-btn" data-id="{{this.id}}">Delete Blog</button>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<script src="/js/profile.js" defer></script>
+>>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20

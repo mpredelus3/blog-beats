@@ -1,4 +1,5 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -56,12 +57,22 @@ router.get('/profile', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Project }],
+=======
+const { Blog, User } = require('..//models');
+const withAuth = require('../../utils/auth');
+
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    const blogData = await Blog.findAll({
+      where: { user_id: req.session.user_id },
+      include: [{ model: User, attributes: ['name'] }],
+>>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20
     });
 
-    const user = userData.get({ plain: true });
+    const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
     res.render('profile', {
-      ...user,
+      blogs,
       logged_in: true
     });
   } catch (err) {
@@ -69,6 +80,7 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
@@ -79,4 +91,6 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+=======
+>>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20
 module.exports = router;

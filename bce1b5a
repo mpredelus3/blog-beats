@@ -1,0 +1,27 @@
+[33mbce1b5a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mluis_branch[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33mbce1b5a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mluis_branch[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: pull origin main: Fast-forward
+[33m34530d9[m[33m ([m[1;31morigin/luis_branch[m[33m)[m HEAD@{2}: commit: wrapped code so that the DOM is fully loaded
+[33m6871396[m HEAD@{3}: commit: DONT CHANGE THE NAMES : changed the names back from blog, redid the code for the handlebars files, restyled it. DONT CHANGE THE NAMES
+[33m908e485[m HEAD@{4}: commit: added a like and view counter, not working. added blogData.json, changed the width of the blog textarea box
+[33m719e9a4[m HEAD@{5}: pull origin main: Fast-forward
+[33m60adf5a[m HEAD@{6}: pull origin main: Fast-forward
+[33mb1f00d9[m HEAD@{7}: reset: moving to HEAD
+[33mb1f00d9[m HEAD@{8}: pull origin main: Fast-forward
+[33m3e68b73[m HEAD@{9}: pull origin main: Fast-forward
+[33m5f70faa[m HEAD@{10}: pull origin main: Fast-forward
+[33m12e9f8c[m HEAD@{11}: pull origin main: Fast-forward
+[33m90834ff[m HEAD@{12}: commit: go back
+[33mf5b29f1[m HEAD@{13}: commit: rendered images
+[33ma9a2a9d[m HEAD@{14}: pull origin main: Fast-forward
+[33m389dee0[m HEAD@{15}: reset: moving to HEAD
+[33m389dee0[m HEAD@{16}: reset: moving to HEAD
+[33m389dee0[m HEAD@{17}: pull origin main: Fast-forward
+[33ma36c2dc[m HEAD@{18}: pull origin main: Fast-forward
+[33m5d6763a[m HEAD@{19}: pull origin main: Fast-forward
+[33me361135[m HEAD@{20}: commit: generalized the .env file so that anyone can use it. Added a user story in the readme
+[33me052bf6[m HEAD@{21}: pull origin main: Fast-forward
+[33mcf5c510[m HEAD@{22}: pull origin main: Fast-forward
+[33m92cb7cf[m HEAD@{23}: pull origin main: Fast-forward
+[33m33f080b[m[33m ([m[1;32mmain[m[33m)[m HEAD@{24}: checkout: moving from main to luis_branch
+[33m33f080b[m[33m ([m[1;32mmain[m[33m)[m HEAD@{25}: commit: initial commmit
+[33m0e9ba8a[m HEAD@{26}: clone: from github.com:mpredelus3/Post-Me.git
