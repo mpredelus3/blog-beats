@@ -1,4 +1,3 @@
-{{!-- creates the basic html for every page --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,32 +8,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Beats</title>
+  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
-  <style>
-    body {
-      font-family: "Orbitron", sans-serif;
-    }
-    .top-bar,
-    .status,
-    .user-info,
-    .login-form-container,
-    .large,
-    .menu,
-    .actions {
-      font-family: "Orbitron", sans-serif;
-    }
-  </style>
 </head>
+
 <body>
-  <div class="container">
-        <header>
-      <div class="box top-bar">Blog Beats
-        <img src="/images/Raccoon.png" alt="Logo">
-      </div>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a href="/">Blog Beats</a>
+        <img src="/img/Raccoon.png" alt="">
+      </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">Profile</a> |
+        <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
@@ -46,7 +34,7 @@
       {{{ body }}}
     </main>
     <footer>
-            <!-- Add footer content here if needed -->
+      
     </footer>
   </div>
 
@@ -57,4 +45,3 @@
 </body>
 
 </html>
-

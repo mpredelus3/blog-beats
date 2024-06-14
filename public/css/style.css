@@ -1,99 +1,57 @@
-body {
-  background-color: #000000;
-  color: #ffffff;
-  background-image: url(https://i.pinimg.com/originals/f9/36/77/f93677f81dc315371074d2db6116c594.gif),
-    linear-gradient(#000000, #26640e);
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  font-family: "Orbitron", sans-serif;
-  margin: 0;
-  padding: 0;
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
 }
 
-
-/* h1, h2, h3, h4, h5, h6, p, div {
+img {
+  position: relative;
+  height: 10vh;
+  left: 10vh;
+  top: 3vh;
+  mix-blend-mode: lighten;
+}
+body {
   font-family: "Orbitron", sans-serif;
-} */
-a:-webkit-any-link {
+  background-color: #000000;
+  color: white;
+  background-image: url(https://i.pinimg.com/originals/f9/36/77/f93677f81dc315371074d2db6116c594.gif),
+    linear-gradient(#000000, #26640e);
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+a:webkit-any-link {
   color: rgb(255, 255, 255);
   cursor: pointer;
   text-decoration: underline;
   height: auto;
-  text-decoration-color: rgb(255, 255, 255);
-  text-decoration-line: underline;
+  text-decoration-color: white;
   text-decoration-style: solid;
   text-decoration-thickness: auto;
-  font-size: xxx-large;
-  float: left;
-  margin-left: 65%;
-  width: 150px;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto 1fr;
-  gap: 20px;
-  padding: 20px;
-  height: 100vh;
-}
-
-.box {
-  background: linear-gradient(to bottom, #232323, #8e8e8e);
-  padding: 20px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1.2em;
-  height: 150px; 
-}
-
-.top-bar {
-  grid-column: span 3;
-  background-image: url("/images/");
-  background-size: cover;
-  background-position: center;
-  font-size: xxx-large;
-}
-
-.large-textarea {
-  width: 1000px;
-  height: 500px;
-}
-
-.top-bar img {
-  mix-blend-mode: lighten;
-  margin-right: 50%;
-  width: 150px;
-  height: auto; 
-  background-image: rgba(255, 255, 255, 0.5);
-}
-
-.large {
-  grid-column: span 3;
-  height: 400px;
-  background-color: white;
-}
-
-
-.orbitron-uniquifier {
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
+main {
+  position: relative;
+  width: 37%;
+  right: 33vh;
 }
 
 .no-button {
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
   border: none;
-  color: #ffffff; 
+  padding: 0;
   cursor: pointer;
-  font-size: xx-large;
-  text-decoration: underline;
-  text-align: center;
-  display: flex;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
 }
 
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+.dollar-amount {
+  color: #056605;
+  font-weight: bold;
+  margin-left: -5px;
+}

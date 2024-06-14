@@ -1,24 +1,18 @@
-{{!-- Remove the loop over blogs to ensure no blogs are displayed --}}
-
-{{!-- {{#each blogs as |blog| }}
-<div class="row mb-4 blog">
+<!-- Loop over each object in the projects array -->
+{{#each projects as |project| }}
+<div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/blog/{{blog.id}}">{{blog.name}}</a>
+      <a href="/project/{{project.id}}">{{project.name}}</a>
     </h2>
+    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      {{blog.description}}
+      {{project.description}}
     </p>
   </div>
 </div>
-{{/each}} --}}
-
-
-<!-- Add content you want to display on the homepage instead -->
-<div class="welcome-message">
-  <h1>Welcome to Blog Beats</h1>
-  <p>Please log in to create and view blogs.</p>
-</div>
+{{/each}}

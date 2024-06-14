@@ -159,7 +159,7 @@ textarea {
   /* 1 */
   line-height: 1.15;
   /* 1 */
-  margin: 10;
+  margin: 0;
   /* 2 */
 }
 
@@ -1172,7 +1172,8 @@ form [type='radio'] {
 }
 
 .container.container-fluid {
-  width: 92%;
+  width: 40%;
+  right: 60vh;
 }
 
 /* FLEX CONTENT */
