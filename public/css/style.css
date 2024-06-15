@@ -19,6 +19,12 @@ body {
     background-position: right;
     background-repeat: no-repeat;
 }
+
+
+img {
+  border-radius: 4px;
+ }
+ 
 a:webkit-any-link {
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -29,12 +35,6 @@ a:webkit-any-link {
   text-decoration-thickness: auto;
 }
 
-<<<<<<< HEAD
-main {
-  position: relative;
-  width: 37%;
-  right: 33vh;
-=======
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,7 +85,6 @@ main {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
->>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20
 }
 
 .no-button {
