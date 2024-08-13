@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
-  const newFormHandler = async (event) => {
+  // Handler for project form submission
+  const newProjectFormHandler = async (event) => {
     event.preventDefault();
 
     const name = document.querySelector('#project-name').value.trim();
@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const delButtonHandler = async (event) => {
+  // Handler for project deletion
+  const delProjectButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
 
@@ -41,17 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const newProjectForm = document.querySelector('.new-project-form');
   if (newProjectForm) {
-    newProjectForm.addEventListener('submit', newFormHandler);
+    newProjectForm.addEventListener('submit', newProjectFormHandler);
   }
 
   const projectList = document.querySelector('.project-list');
   if (projectList) {
-    projectList.addEventListener('click', delButtonHandler);
+    projectList.addEventListener('click', delProjectButtonHandler);
   }
-=======
   console.log('DOM fully loaded and parsed');
 
-  const newFormHandler = async (event) => {
+  // Handler for blog form submission
+  const newBlogFormHandler = async (event) => {
     event.preventDefault();
 
     const name = document.querySelector('#blog-name').value.trim();
@@ -76,7 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const delButtonHandler = async (event) => {
+  // Handler for blog deletion
+  const delBlogButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
 
@@ -96,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Form element:', form);
 
   if (form) {
-    form.addEventListener('submit', newFormHandler);
+    form.addEventListener('submit', newBlogFormHandler);
   } else {
     console.error('Form element not found');
   }
@@ -105,9 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Blog list element:', blogList);
 
   if (blogList) {
-    blogList.addEventListener('click', delButtonHandler);
+    blogList.addEventListener('click', delBlogButtonHandler);
   } else {
     console.error('Blog list element not found');
   }
->>>>>>> c0906e5919480a89ca5f8de74db1a541318a1a20
 });
